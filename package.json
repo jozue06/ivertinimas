@@ -1,0 +1,39 @@
+{
+  "name": "ivertinimas",
+  "version": "1.0.0",
+  "description": "Devbridge ivertinimas",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest --verbose --coverage ",
+    "test-watch": "jest --watchAll ",
+    "lint": "eslint **/*.js",
+    "flow": "flow"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__test__"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "jm6",
+  "license": "ISC",
+  "dependencies": {
+    "babel-env": "^2.4.1",
+    "babel-eslint": "^8.2.3",
+    "babel-register": "^6.26.0",
+    "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
+    "eslint": "^4.19.1",
+    "express": "^4.16.3",
+    "fs": "0.0.1-security",
+    "jest": "^23.1.0",
+    "superagent": "^3.8.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.74.0"
+  }
+}
