@@ -15,33 +15,22 @@ var app = app || {};
     $('.main-nav .tab:first').click();
   };
 
-  articleView.setTeasers = () => {
-    $('.article-body *:nth-of-type(n+2)').hide();
-    $('article').on('click', 'a.read-on', function(e) {
-      e.preventDefault();
-      if ($(this).text() === 'Read on →') {
-        $(this).parent().find('*').fadeIn();
-        $(this).html('Show Less &larr;');
-      } else {
-        $('body').animate({
-          scrollTop: ($(this).parent().offset().top)
-        },200);
-        $(this).html('Read on &rarr;');
-        $(this).parent().find('.article-body *:nth-of-type(n+2)').hide();
-      }
-    });
-  };
-
-  articleView.initNewArticlePage = () => {
-    $('.tab-content').fadeIn(1000);
-    $('#export-field').hide();
-    $('#article-json').on('focus', function(){
-      this.select();
-    });
-
-    $('#new-form').on('change', 'input, textarea', articleView.create);
-    $('#new-form').on('submit', articleView.submit);
-  };
+  // articleView.setTeasers = () => {
+  //   $('.article-body *:nth-of-type(n+2)').hide();
+  //   $('article').on('click', 'a.read-on', function(e) {
+  //     e.preventDefault();
+  //     if ($(this).text() === 'Read on →') {
+  //       $(this).parent().find('*').fadeIn();
+  //       $(this).html('Show Less &larr;');
+  //     } else {
+  //       $('body').animate({
+  //         scrollTop: ($(this).parent().offset().top)
+  //       },200);
+  //       $(this).html('Read on &rarr;');
+  //       $(this).parent().find('.article-body *:nth-of-type(n+2)').hide();
+  //     }
+  //   });
+  // };
 
   articleView.create = () => {
     var article;
@@ -77,14 +66,6 @@ var app = app || {};
     article.insertRecord();
 
     window.location = './index.html';
-  }
-
-
-  articleView.initIndexPage = () => {
-    app.Article.all.forEach(a => $('.blog-posts').append(a.toHtml()));
-    articleView.handleMainNav();
-    articleView.setTeasers();
-    $('pre code').each((i, block) => hljs.highlightBlock(block));
   };
 
   module.articleView = articleView;

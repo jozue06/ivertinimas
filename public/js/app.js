@@ -10,6 +10,7 @@ import router from './api.js';
 let app = express();
 
 app.use(cors());
+// app.use(express.static('./public'));
 // app.use(morgan('dev'));
 
 app.use(express.json());
