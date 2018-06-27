@@ -2,8 +2,8 @@
 
 import express from 'express';
 const router = express.Router();
-import modelFinder from '../middleware/modelSwitch.js';
-router.param('model', modelFinder);
+// import modelFinder from '../middleware/modelSwitch.js';
+// router.param('model', modelFinder);
 
 let sendJSON = (res,data) => {
   res.statusCode = 200;
@@ -69,6 +69,18 @@ router.delete('/api/v1/:model/:id', (req,res,next) => {
     return err;
   }
 });
+
+router.get('/new', (req, res) => res.sendFile('new.html', {root: './public'}));
+
+
+router.get('/ivertinimas', (req, res) => {
+  res.sendFile('index.html', {root: './public'});
+});
+
+// router.post('/articles', (req, res) => {
+  
+  
+// });
 
 
 export default router;
