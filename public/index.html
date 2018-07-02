@@ -50,19 +50,33 @@
         </section>
       </section>
 
-      <section class="blog-posts">
-
-        
+      <section id="write" class="tab-content">
+        <h1>New Post</h1>
+        <form action="#" id="new-form">
+          <label>
+            <input type="text" id="article-title" placeholder="Post title" required>
+          </label>
+          <textarea id="article-body" rows="8" cols="40" required></textarea>
+          <label>
+            <input type="text" id="article-author" placeholder="Your Name" required>
+          </label>
+            <label>
+            <input type="text" id="article-category" placeholder="Category?">
+          </label>
+          <button type="submit">Create</button>
+        </form>
       </section>
-    </main>
-    <footer>
-      &copy; | Jm6 |
-    </footer>
+    
+        <div id="footer container">
+          <footer class="footer"><a class="about-us"></a>|jm6|</a></footer>
+        </div>
+  
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src='https://cdn.rawgit.com/visionmedia/page.js/master/page.js'></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+      <!-- <script src="/public/js/articleView.js"></script>
+      <script src="/public/js/article.js"></script> -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
-    <script src="../public/js/article.js"></script>
-    <script src="../public/js/articleView.js"></script>
+
   </body>
 </html>

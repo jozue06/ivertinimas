@@ -9,4 +9,4 @@ require('babel-register');
 // mongoose.connect(process.env.MONGODB_URI);
 
 // Require our main app file and start the web server up
-require('./public/js/app').start(process.env.PORT);
+require('./public/app').start(process.env.PORT);

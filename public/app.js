@@ -3,14 +3,14 @@
 import express from 'express';
 // import morgan from 'morgan';
 import cors from 'cors';
-import router from './api.js';
+import router from '../public/js/api.js';
 // import errorHandler from './middleware/error.js';
 // import notFound from './middleware/404.js';
 
 let app = express();
 
 app.use(cors());
-// app.use(express.static('./public'));
+app.use(express.static('./'));
 // app.use(morgan('dev'));
 
 app.use(express.json());
